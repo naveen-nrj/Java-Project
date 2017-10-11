@@ -3,11 +3,11 @@ import java.util.*;
 import java.io.*;
 import java.text.SimpleDateFormat;
 public class StudentProfile {
-	String name;
-	String rollno;
-	Date DOB;
-	String college;
-	int semester;
+	public String name;
+	public String rollno;
+	public Date DOB;
+	public String college;
+	public int semester;
 	
 	public StudentProfile() {
 		name = "";
@@ -98,12 +98,6 @@ public class StudentProfile {
 		catch(IOException ioe) {
 			System.out.println("File may be corrupt!");
 		}
-	}
-	public void PrintDetails() {
-		
-		SimpleDateFormat dateOnly = new SimpleDateFormat("dd/MM/yyyy");
-		System.out.println("Name:" + name + "\n" + "Roll No:" + rollno + "\n" + "DOB:" + dateOnly.format(DOB) + "\n" + "College:" + college + "\n" + "Semsester" + semester);
-		
 	}
 	
 }
