@@ -22,5 +22,9 @@ public class Secondperiodicals {
 	public void printmarks() {
 		System.out.println("The mark for first periodical is:" + mark + "\n");
 	}
+	
+	public int GetMark() {
+		return mark;
+	}
 
 }
