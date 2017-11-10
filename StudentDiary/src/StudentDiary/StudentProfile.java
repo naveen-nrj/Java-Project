@@ -1,6 +1,7 @@
 package StudentDiary;
+import java.io.*;
 import java.util.*;
-public class StudentProfile {
+public class StudentProfile implements Serializable{
 	public String name;
 	public String rollno;
 	public Date DOB;
@@ -56,7 +57,7 @@ public class StudentProfile {
 		this.DOB = C.getTime();
 		System.out.println("Enter the semester");
 		this.semester = s.nextInt();
+		s.close();
 	}
-	
 }
 
