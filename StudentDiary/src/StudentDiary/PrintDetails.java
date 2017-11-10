@@ -5,7 +5,7 @@ public class PrintDetails extends StudentProfile {
 	public PrintDetails() {
 		super.newStudentProfile();
 		SimpleDateFormat dateOnly = new SimpleDateFormat("dd/MM/yyyy");
-		System.out.println("Name:" + name + "\n" + "Roll No:" + rollno + "\n" + "DOB:" + dateOnly.format(DOB) + "\n" + "College:" + college + "\n" + "Semsester" + semester);
+		System.out.println("Name:" + getname() + "\n" + "Roll No:" + getrollno() + "\n" + "DOB:" + dateOnly.format(DOB) + "\n" + "College:" + college + "\n" + "Semsester" + semester);
 		
 	}
 }

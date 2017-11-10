@@ -17,6 +17,7 @@ public class Firstperiodicals {
 		Scanner s = new Scanner(System.in);
 		System.out.println("Enter the first periodical mark");
 		mark = s.nextInt();
+		s.close();
 	}
 	
 	public void printmarks() {

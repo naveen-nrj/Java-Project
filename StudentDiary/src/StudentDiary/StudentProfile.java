@@ -1,29 +1,41 @@
 package StudentDiary;
-import java.io.*;
-import java.util.*;
+
+import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Scanner;
+
+
 public class StudentProfile implements Serializable{
-	public String name;
-	public String rollno;
-	public Date DOB;
-	public String college;
-	public int semester;
-	
+	protected String name;
+	protected String rollno;
+	protected String college;
+	protected String StudentDpt;
+	protected int age;
+	protected String gender;
+	protected Date DOB;
+	protected String address;
+    protected double phoneNo;
+	protected int semester;
+  
+
 	public StudentProfile() {
 		name = "";
 		rollno = "";
 		college = "";
-		semester = 1;
 		Calendar C = Calendar.getInstance();
 		C.set(2017, 1, 1);
 		DOB = C.getTime();
+		semester = 1;
 	}
 	public StudentProfile(String name, String rollno, Date DOB, String college, int semester) {
 		this.name = name;
 		this.rollno = rollno;
-		this.DOB = DOB;
 		this.college = college;
+		this.DOB = DOB;
 		this.semester = semester;
-	}
+		}
 	public String getname() {
 		return name;
 	}
@@ -45,6 +57,8 @@ public class StudentProfile implements Serializable{
 		this.name = s.next();
 		System.out.println("Enter roll no");
 		this.rollno = s.next();
+		System.out.println("Enter the semester");
+		this.semester = s.nextInt();
 		System.out.println("Enter the name of the college");
 		this.college = s.next();
 		System.out.println("Enter date of birth in day , month , year format");
@@ -55,9 +69,6 @@ public class StudentProfile implements Serializable{
 		Calendar C = Calendar.getInstance();
 		C.set(year, month-1, day);
 		this.DOB = C.getTime();
-		System.out.println("Enter the semester");
-		this.semester = s.nextInt();
-		s.close();
 	}
+	
 }
-
