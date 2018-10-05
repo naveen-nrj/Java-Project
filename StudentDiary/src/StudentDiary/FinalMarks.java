@@ -8,8 +8,8 @@ public class FinalMarks {
 		finalmarks = 0;
 	}
 	
-	public void CalculateFinalMarks(Firstperiodicals F, Secondperiodicals S, Endsem E, Internals I) {
-		finalmarks = (float) ((F.GetMark()*0.6) + (S.GetMark()*0.6) + (E.GetMark()/2) + I.GetMark());
+	public void CalculateFinalMarks(Firstperiodicals First, Secondperiodicals Second, Endsem End, Internals Intern) {
+		finalmarks = (float) ((First.GetMark()*0.6) + (Second.GetMark()*0.6) + (Endsem.GetMark()/2) + Intern.GetMark());
 	}
 	
 	public float GetFinalMarks() {
