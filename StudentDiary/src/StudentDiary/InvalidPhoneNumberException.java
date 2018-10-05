@@ -3,7 +3,7 @@ package StudentDiary;
 public class InvalidPhoneNumberException extends Exception {
 
 	public InvalidPhoneNumberException() {
-		super("Digits less than 10");
+		super("Invalid Phone Number: Number of Digits is less than 10");
 	}
 
 }
